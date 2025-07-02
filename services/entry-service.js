@@ -48,7 +48,7 @@ const processEntry = (data, files, callback) => {
 
     insertEntry({ values, hasReceipt }, (err) => {
         if (err) {
-            return callback({ status: 500, message: 'Database Error' });
+            return callback({ status: 500, message: 'There was an error processing your entry', error: "Database Error" });
         }
         return callback(null, { success: true });
     });
